@@ -57,7 +57,7 @@ endif
 " Theme setup
 hi clear
 syntax reset
-let g:colors_name = "base16-simple"
+let g:colors_name = "base16-solarized-original-colors"
 
 function <sid>li(group, target)
 	exec "hi link " . a:group . " " . a:target
