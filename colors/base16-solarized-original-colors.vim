@@ -206,7 +206,8 @@ call <sid>hl("Error", "",   "none", "bold")
 call <sid>hi("Error", 0x08, "",     "")
 "       *Error           any erroneous construct
 
-call <sid>hi("Todo", 0x0E, "0x00", "bold")
+call <sid>hl("Todo", "", "none", "bold")
+call <sid>hi("Todo", 0x0E, "", "")
 "       *Todo            anything that needs extra attention; mostly the
 "                        keywords TODO FIXME and XXX
 
