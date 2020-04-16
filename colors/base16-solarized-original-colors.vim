@@ -59,7 +59,7 @@ hi clear
 syntax reset
 let g:colors_name = "base16-solarized-original-colors"
 
-function <sid>li(group, target)
+function <sid>ln(group, target)
 	exec "hi link " . a:group . " " . a:target
 endfun
 
@@ -180,11 +180,14 @@ call <sid>hi("PreProc", 0x09, "", "")
 
 call <sid>hi("Type", 0x0A, "", "")
 "       *Type            int, long, char, etc.
+call <sid>ln("StorageClass", "Keyword")
+call <sid>ln("Structure", "Keyword")
+call <sid>ln("Typedef", "Keyword")
 "        StorageClass    static, register, volatile, etc.
 "        Structure       struct, union, enum, etc.
 "        Typedef         A typedef
 
-call <sid>hi("Special", 0x08, "", "")
+call <sid>hi("Special", 0x0E, "", "")
 "       *Special         any special symbol
 "        SpecialChar     special character in a constant
 "        Tag             you can use CTRL-] on this
@@ -212,6 +215,9 @@ call <sid>hi("Title", 0x09, "", "bold")
 " C highlighting
 "   call <sid>hi("cOperator",  0x0C, "", "")
 "   call <sid>hi("cPreCondit", 0x0E, "", "")
+
+" C++ highlighting
+call <sid>ln("cppModifier", "Keyword")
 
 " C# highlighting
 "   call <sid>hi("csClass",                0x0A, "", "")
