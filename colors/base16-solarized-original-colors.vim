@@ -114,8 +114,8 @@ call <sid>hi("CursorLine",   "",   0x01, "none")
 call <sid>hi("MatchParen",   "",   0x03, "")
 
 " Selection
-call <sid>hi("Visual",    0x00, 0x02, "")
-call <sid>hi("VisualNOS", 0x08, 0x02, "")
+call <sid>hl("Visual",    "none", "none", "bold")
+call <sid>hi("Visual",    "", 0x02, "")
 
 " Menus
 call <sid>hi("PMenu",        0x05, 0x01, "none")
